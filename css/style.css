@@ -4,30 +4,41 @@
     font-family: 'Nunito', sans-serif;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    /* font-family: 'Satisfy', cursive; */
     user-select: none;
 }
 /** Boton para subir pagina*/
 div#btnUp{
+    box-sizing: border-box;
     position: fixed;
     z-index: 100000;
     cursor: pointer;
     opacity: 1;
     bottom: 800px;
-    right: 40px;
+    right: 20px;
+    border: #000 1.3px solid;
+    border-radius: 50%;
     visibility: hidden;
     opacity: 0;
     transition: .8s;
+    background-color: #fff;
+    padding: 5px;
 }
+div#btnUp div{
+    margin: 0;
+    padding: 0;
+    background-color: #ff2800;
+    border-radius: 50%;
+}
+
 div#btnUp i{
-   color: #ff2800;
-    font-size: 6rem;
+   color: #fff;
+    font-size: 4.5rem;
 }
 div#btnUp:hover{
     opacity: .7;
 }
 div#btnUp.active{
-    bottom: 40px;
+    bottom: 50px;
     opacity: 1;
     visibility: visible;
 }
@@ -116,8 +127,8 @@ h4{
     align-items: center;
 }
 .navegacion .logo img{
-    height: 10rem;
-    margin-right: 2rem;
+    height: 15rem;
+    margin-right: 1rem;
 }
 .navegacion .nav a{
     text-decoration: none;
