@@ -4,7 +4,6 @@
     font-family: 'Nunito', sans-serif;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    user-select: none;
 }
 /** Boton para subir pagina*/
 div#btnUp{
@@ -22,6 +21,7 @@ div#btnUp{
     transition: .8s;
     background-color: #fff;
     padding: 5px;
+    scroll-behavior: smooth;
 }
 div#btnUp div{
     margin: 0;
@@ -46,6 +46,7 @@ div#btnUp.active{
 /** Utilidades */
 html{
     font-size: 62.5%; /* Reset para REMS - 62.5% = 10px de 16px */
+    scroll-behavior: smooth;
 }
 body{
     background: #f1f1f1;
@@ -100,52 +101,75 @@ h4{
 .header.inicio{
     position: relative;
     background-image: url(../img/banner1.jpg);
-    /* background-position: center center; */
     background-size: cover;
     height: 100vh;
     min-height: 60rem;
 }
-.contenido-header{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100vh;
+.header{
     position: relative;
 }
-.navegacion{
-    padding-top: 10px;
+.header .overlay{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .1);
+}
+.nav,
+.nav-two{   
+    position: absolute;
+    height: 130px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 10000;
 }
-.navegacion .logo{
-    text-decoration: none;
-    font-size: 3.5rem;
-    color: #513530;
-    font-weight: 700;
+.nav-two{
+    height: 100%    ;
+}
+.nav .logo,
+.nav-two .logo{
+    margin-left: 50px;
+    height: 100%;
+}
+.logo img{
+    height: 100%;
+}
+.nav-two .enlaces{
+    width: 50%;
+}
+.enlaces{
+    height: 100%;
+    width: 60%;
     display: flex;
     align-items: center;
+    justify-content: space-around;
 }
-.navegacion .logo img{
-    height: 15rem;
-    margin-right: 1rem;
-}
-.navegacion .nav a{
+.enlaces a{
+    font-size: 2.3rem;
+    font-weight: 600;
+    color:#048306;
     text-decoration: none;
-    font-size: 2.5rem;
-    color: #513530;
-    margin-left: 3.5rem;
-    font-weight: 700;
-    border-bottom: transparent 1.5px solid;
-    border-top: transparent 1.5px solid;
-    transition: .2s ease;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    transition: .3s ease-in-out border;  
 }
-.navegacion .nav a:first-child{
-    margin-left: 0;
+.enlaces a:hover{
+    border-top: 1px solid #f0992d;
+    border-bottom: 1px solid #f0992d;
 }
-.nav a:hover{
-    border-bottom:#CF4025 1.5px solid;
-    border-top: #CF4025 1.5px solid;
+.hamburger{
+    display: none;
+}
+.hamburger span{
+    height: 100%;
+    width: 100%;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    cursor: pointer;
 }
 .text-header{
     position: absolute;
@@ -153,6 +177,7 @@ h4{
     color: #513530;
     font-family: 'Satisfy', cursive;
     user-select: none;
+    left: 50px;
     bottom: 200px;
     margin-bottom: 25px;
     text-shadow: white -4px 3px;
@@ -356,13 +381,14 @@ h4{
 /* -------------------------------------------------------------------------- */
 /*                              contenido footer                              */
 /* -------------------------------------------------------------------------- */
-.footer{
+footer.footer{
     height: 80px;
     width: 100%;
     background-color:#000;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 0;
 }
 .footer .logo-footer{
     width: 70px;
@@ -396,62 +422,34 @@ h4{
 /*                           Pagina de curiosidades                           */
 /* -------------------------------------------------------------------------- */
 .header-two{
-    height: 100px;
-    background-color: coral;
+    height: 150px;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 50px;
+    position: relative;
+    background-color: #59d359;
 }
-.nav a{
-    text-decoration: none;
-    font-size: 20px;
-    margin-left: 15px;
-}
-.logo-two{
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-}
-.logo-two span{
-    font-size: 20px;
-}
-.logo-two img{
-    height: 100%;
+.header-two .enlaces a{
+    color: white;
+    font-weight: 400;
 }
 .main-curiosidad{
     text-align: center;
 }
-.article-curiosidad{
+.article-gen{
+    margin: auto;
+    width: 80%;
     margin-top: 20px;
-    width: 100%;
-    background-color: lightpink;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
 }
-.article-curiosidad:nth-child(even){
-    flex-direction: row-reverse;
-}
-.article-curiosidad img{
-    max-width: 550px;
-    width: 550px;
-    animation: ease-in animat 1s;
-}
-.cont-article{
-    width: 550px;
-}
-.cont-article h3{
-    font-weight: 400;
-    font-size: 4rem;
-}
-.cont-article p{
-    line-height: 30px;
-    padding: 10px;
+.article-gen p{
+    text-align: justify;
     font-size: 20px;
+}
+
+.article-curiosidad a{
+    display: inline;
+    color: #ff2800;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
 }
 @keyframes animat {
     0% {
@@ -462,16 +460,13 @@ h4{
         transform: scale(1);
     }
 }
-
-
 /* Responsive */
 @media screen and (max-width:900px){
-    .navegacion .nav a{
-        font-size: 2rem;
-        margin-left: 2rem;
-    }
     .header.inicio{
         background-position: center center;
+    }
+    .enlaces a{
+        font-size: 15px;
     }
     .curiosidad h3{
         font-size: 3rem;
@@ -479,11 +474,60 @@ h4{
     .curiosidad p{
         font-size: 1.7rem;
     }
-
+    .about-product{
+        height: 100vh;
+    }
 }
 @media screen and (max-width:768px){
-    .nav{
-        display: none;
+    .enlaces{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 100%;
+        transition: all .6s ease;
+        background: #59d359;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #59d359, #33cc33);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #59d359, #33cc33); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    .enlaces a{
+        text-align: center;
+        width: 100%;
+        color: #fff;
+        font-size: 30px;
+        font-weight: 400;
+        border: none;
+    }
+    .enlaces a:hover{
+        background-color: rgba(0, 0, 0, .1);
+        border: none;
+    }
+    .uno{
+        -webkit-clip-path: circle(0% at 100% 0);
+        clip-path: circle(0% at 100% 0);
+    }
+    .dos{
+        -webkit-clip-path: circle(150% at 100% 0);
+        clip-path: circle(150% at 100% 0);
+    }
+    .nav .logo,
+    .nav-two  .logo{
+        margin-left: 10px;
+    }
+    .hamburger{
+        height: 60px;
+        width: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #000;
+        background-color: rgba(255, 255, 255, .8);
+        border-radius: 25%;
+        z-index: 100;
+        cursor: pointer;
+        margin-right: 20px;
     }
     .text-header{
         bottom: 0;
@@ -514,6 +558,26 @@ h4{
     .contenido-product{
         margin-top: 80px;
     }
+    .article-curiosidad{
+        align-items: center;
+    }
+    .article-curiosidad img{
+        height: 300px;
+        width: 50%;
+    }
+    .cont-article{
+        width: 50%;
+    }
+    .cont-article p{
+        font-size: 15px;
+        padding: 0;
+        margin-right: 0;
+        margin-left: 20px;
+    }
+    .article-curiosidad:nth-child(odd) p{
+        margin-left: 0;
+        margin-right: 20px;
+    }
 }
 @media screen and (max-width:680px){
     .contenido-product{
@@ -528,7 +592,24 @@ h4{
     .curiosidad{
         width: 100%;
     }
-
+    .article-curiosidad{
+        flex-direction: column;
+    }
+    .article-curiosidad:nth-child(odd){
+        flex-direction: column;
+    }
+    .article-curiosidad img{
+        width: 100%;
+    }
+    .cont-article h3{
+        padding-top: 15px;
+    }
+    .cont-article{
+        width: 100%;
+    }
+    .cont-article p{
+        margin: 0;
+    }
 }
 @media screen and (max-width:500px){
     .about-product p{
@@ -547,20 +628,6 @@ h4{
     .copyright{
         margin-top: 10px;
     }
-    .article-curiosidad{
-        flex-direction: column;
-    }
-    .article-curiosidad:nth-child(even){
-        flex-direction: column;
-    }
-    .article-curiosidad img{
-        width: 100%;
-    }
-    .cont-article h3{
-        
-    }
-    .cont-article{
-        width: 100%;
-    }
+
 }
 

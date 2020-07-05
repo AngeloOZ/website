@@ -19,26 +19,29 @@
 <body>
     <div id="btnUp" onclick="scrollTotop();" class="">
         <div>
-            <i class='bx bx-chevron-up' undefined ></i>
+            <a href="#"><i class='bx bx-chevron-up' undefined ></i></a>
         </div>
     </div>
     <header class="header inicio">
-        <div class="contenedor">
-            <div class="contenido-header">
-                <div class="navegacion">
-                    <a href="#" class="logo"><img src="./img/logo.png" alt=""><span>Nutri Mixs</span>
-                    </a>
-                    <nav class="nav">
-                        <!-- <a href="#">Inicio</a> -->
-                        <a href="#productos">Nuestro Producto</a>
-                        <a href="#contactos">Contactos</a>
-                    </nav>
-                </div>
-                <h1 class="text-header">
-                    Porque comer bien,<br>es vivir mejor
-                </h1>
+        <div class="overlay"></div>
+        <nav class="nav">
+            <div class="logo">
+                <a href="/" class=""><img src="./img/logo.png" alt="">
+                </a>
             </div>
-        </div>
+            <div class="hamburger" id="icono">
+                <span><i id="icon" class='bx bx-menu'></i></span>
+            </div>
+            <div class="enlaces uno" id="enlaces">
+                <a href="#productos">Nuestro Producto</a>
+                <a href="#">Acerca de Nosotros</a>
+                <a href="curiosidades.html">Beneficios</a>
+                <a href="#">Contactos</a>
+            </div>
+        </nav>
+        <h1 class="text-header">
+            Porque comer bien,<br>es vivir mejor
+        </h1>
     </header>
     <main class=" container" id="productos">
         <section class="content-product section">
@@ -69,7 +72,7 @@
                     serotonina. Esta sustancia mejora la transmisión de señales nerviosas, reduce la sensación de
                     hambre, disminuye la concentración de sustancias relacionadas con la inflamación, combate la
                     obesidad abdominal y la hipertensión, mejora la salud cardíaca y nos pone de buen humor.</p>
-                <a href="./curiosidades" class="btn btn-curiosidad"><span>Conocer más</span></a>
+                <a href="./curiosidades.html" class="btn btn-curiosidad"><span>Conocer más</span></a>
             </div>
         </div>
     </section>
