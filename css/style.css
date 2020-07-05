@@ -432,20 +432,30 @@ footer.footer{
     font-weight: 400;
 }
 .main-curiosidad{
-    text-align: center;
-}
-.main-curiosidad h1{
-
-    font-size: 40px;
+    width: 100%;
+    background-color: lightgreen;
+    margin: auto;
 }
 .article-gen{
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
     margin: auto;
     width: 80%;
     margin-top: 20px;
     padding: 20px 40px;
 }
+.title-curiosidad{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.title-curiosidad h1{
+    text-align: center;
+    font-size: 40px;
+}
 .article{
-    background-color: lightgreen;
     border-radius: 25px;
     margin: auto;
     padding: 20px;
@@ -656,6 +666,12 @@ footer.footer{
     }
     .copyright{
         margin-top: 10px;
+    }
+    .article-gen{
+        padding: 20px 0;
+    }
+    .title-curiosidad h1{
+        font-size: 30px;
     }
 
 }
