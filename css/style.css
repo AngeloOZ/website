@@ -1,12 +1,13 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Nunito', sans-serif;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
 /** Boton para subir pagina*/
-div#btnUp{
+div#btnUp {
     box-sizing: border-box;
     position: fixed;
     z-index: 100000;
@@ -23,61 +24,75 @@ div#btnUp{
     padding: 5px;
     scroll-behavior: smooth;
 }
-div#btnUp div{
+
+div#btnUp div {
     margin: 0;
     padding: 0;
     background-color: #ff2800;
     border-radius: 50%;
 }
 
-div#btnUp i{
-   color: #fff;
+div#btnUp i {
+    color: #fff;
     font-size: 4.5rem;
 }
-div#btnUp:hover{
+
+div#btnUp:hover {
     opacity: .7;
 }
-div#btnUp.active{
+
+div#btnUp.active {
     bottom: 50px;
     opacity: 1;
     visibility: visible;
 }
 
 /** Utilidades */
-html{
-    font-size: 62.5%; /* Reset para REMS - 62.5% = 10px de 16px */
+html {
+    font-size: 62.5%;
+    /* Reset para REMS - 62.5% = 10px de 16px */
     scroll-behavior: smooth;
 }
-body{
+
+body {
     background: #f1f1f1;
 }
-img{
+
+img {
     max-width: 100%;
 }
-h1{
-    font-size: 3.8rem;    
+
+h1 {
+    font-size: 3.8rem;
 }
-h2{
+
+h2 {
     font-size: 3.4rem;
 }
-h3{
+
+h3 {
     font-size: 3rem;
 }
-h4{
+
+h4 {
     font-size: 2.6rem;
 }
-.fw-300{
+
+.fw-300 {
     font-weight: 300;
 }
-.text-center{
+
+.text-center {
     text-align: center;
     letter-spacing: 1px;
 }
-.section{
+
+.section {
     padding-bottom: 2rem;
     padding-top: 2rem;
 }
-.btn{
+
+.btn {
     text-align: center;
     color: black;
     background-color: #fff;
@@ -87,35 +102,41 @@ h4{
     text-decoration: none;
     padding: 10px 20px;
 }
-.dflex{
+
+.dflex {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 /** Fin utilidades */
-.contenedor{
+.contenedor {
     max-width: 140rem;
     width: 90%;
     margin: 0 auto;
 }
-.header.inicio{
+
+.header.inicio {
     position: relative;
     background-image: url(../img/banner1.jpg);
     background-size: cover;
     height: 100vh;
     min-height: 60rem;
 }
-.header{
+
+.header {
     position: relative;
 }
-.header .overlay{
+
+.header .overlay {
     position: absolute;
     height: 100vh;
     width: 100%;
     background-color: rgba(0, 0, 0, .1);
 }
+
 .nav,
-.nav-two{   
+.nav-two {
     position: absolute;
     height: 130px;
     width: 100%;
@@ -124,44 +145,53 @@ h4{
     align-items: center;
     z-index: 10000;
 }
-.nav-two{
-    height: 100%    ;
+
+.nav-two {
+    height: 100%;
 }
+
 .nav .logo,
-.nav-two .logo{
+.nav-two .logo {
     margin-left: 50px;
     height: 100%;
 }
-.logo img{
+
+.logo img {
     height: 100%;
 }
-.nav-two .enlaces{
+
+.nav-two .enlaces {
     width: 50%;
 }
-.enlaces{
+
+.enlaces {
     height: 100%;
     width: 60%;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
-.enlaces a{
+
+.enlaces a {
     font-size: 2.3rem;
     font-weight: 600;
-    color:#048306;
+    color: #048306;
     text-decoration: none;
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
-    transition: .3s ease-in-out border;  
+    transition: .3s ease-in-out border;
 }
-.enlaces a:hover{
+
+.enlaces a:hover {
     border-top: 1px solid #f0992d;
     border-bottom: 1px solid #f0992d;
 }
-.hamburger{
+
+.hamburger {
     display: none;
 }
-.hamburger span{
+
+.hamburger span {
     height: 100%;
     width: 100%;
     display: block;
@@ -171,7 +201,8 @@ h4{
     font-size: 40px;
     cursor: pointer;
 }
-.text-header{
+
+.text-header {
     position: absolute;
     font-size: 4.5rem;
     color: #513530;
@@ -184,30 +215,34 @@ h4{
 }
 
 /* Acerca de nuestros Productos */
-#productos{
+#productos {
     width: 100%;
     background-image: url(../img/banner2.jpg);
     background-size: cover;
     background-position: left center;
 }
-.title-about-product{
+
+.title-about-product {
     margin-top: 20px;
     text-align: center;
     font-weight: 500;
     color: white;
 }
-.content-product{
+
+.content-product {
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, .5);
 }
-.about-product{
+
+.about-product {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 50%);
     height: 100%;
 }
-.contenido-product{
+
+.contenido-product {
     grid-column: 2/3;
     display: flex;
     flex-direction: column;
@@ -215,13 +250,15 @@ h4{
     align-items: center;
     padding: 0 50px;
 }
-.about-product p{
+
+.about-product p {
     text-align: center;
     color: white;
     width: 100%;
     font-size: 2.2rem;
 }
-.about-product .btn-productos{
+
+.about-product .btn-productos {
     position: relative;
     display: block;
     background-color: transparent;
@@ -233,7 +270,8 @@ h4{
     margin-top: 25px;
     overflow: hidden;
 }
-.about-product .btn-productos::before{
+
+.about-product .btn-productos::before {
     background-color: white;
     content: '';
     display: block;
@@ -244,10 +282,12 @@ h4{
     height: 50px;
     transition: .5s ease;
 }
-.btn-productos:hover::before{
+
+.btn-productos:hover::before {
     left: 0;
 }
-.btn-productos:hover > span{
+
+.btn-productos:hover>span {
     position: relative;
     z-index: 10000;
     color: black;
@@ -257,36 +297,42 @@ h4{
 /* -------------------------------------------------------------------------- */
 /*                            Seccion Curiosidades                            */
 /* -------------------------------------------------------------------------- */
-.subtitle{
+.subtitle {
     text-align: center;
     font-weight: 500;
     color: gray;
 }
-.contenido-curiosidad{
+
+.contenido-curiosidad {
     padding: 20px;
     width: 100%;
     height: auto;
     display: grid;
     grid-template-columns: repeat(2, 50%);
 }
-.contenido-curiosidad  img{
+
+.contenido-curiosidad img {
     align-items: center;
     width: 100%;
     max-width: 500px;
 }
-.curiosidad{
+
+.curiosidad {
     text-align: center;
     padding: 2.5rem;
 }
-.curiosidad h3{
+
+.curiosidad h3 {
     font-size: 4rem;
     padding-bottom: 2rem;
 }
-.curiosidad p{
+
+.curiosidad p {
     text-align: justify;
     font-size: 2rem;
 }
-.curiosidad .btn-curiosidad{
+
+.curiosidad .btn-curiosidad {
     position: relative;
     background-color: transparent;
     margin-top: 2rem;
@@ -298,7 +344,8 @@ h4{
     overflow: hidden;
     margin: 2rem auto 0 auto;
 }
-.curiosidad .btn-curiosidad::before{
+
+.curiosidad .btn-curiosidad::before {
     content: '';
     background-color: #000;
     display: block;
@@ -309,10 +356,12 @@ h4{
     height: 50px;
     transition: .5s ease;
 }
-.btn-curiosidad:hover::before{
+
+.btn-curiosidad:hover::before {
     left: 0;
 }
-.btn-curiosidad:hover > span{
+
+.btn-curiosidad:hover>span {
     position: relative;
     z-index: 10000;
     color: white;
@@ -322,13 +371,14 @@ h4{
 
 
 /*  */
-.productos{
+.productos {
     display: flex;
     flex-flow: wrap row;
     justify-content: space-evenly;
     padding: 5rem 0;
 }
-.producto{
+
+.producto {
     width: 350px;
     height: 280px;
     background: #95CF25;
@@ -336,33 +386,39 @@ h4{
     cursor: pointer;
     border-radius: 5px;
     padding: 0;
-    transition:.5s ease-in all;
+    transition: .5s ease-in all;
     margin-bottom: 10rem;
 }
 
-.producto:hover{
+.producto:hover {
     height: 450px;
 }
-.producto:hover .descripcion{
+
+.producto:hover .descripcion {
     display: block;
 }
-.producto:hover .textos-productos{
+
+.producto:hover .textos-productos {
     visibility: visible;
 }
-.imgPro{
+
+.imgPro {
     width: 100%;
     height: 100%;
     max-height: 280px;
 }
-.imgPro img{
+
+.imgPro img {
     margin: 0 auto;
     width: 100%;
     height: 100%;
 }
-.descripcion{
+
+.descripcion {
     display: none;
 }
-.producto h3{
+
+.producto h3 {
     letter-spacing: 1px;
     color: white;
     padding: 10px 0;
@@ -370,7 +426,8 @@ h4{
     font-size: 2.5rem;
     font-weight: 300;
 }
-.descripcion .textos-productos{
+
+.descripcion .textos-productos {
     color: white;
     padding: 2rem 1rem;
     text-align: justify;
@@ -381,62 +438,79 @@ h4{
 /* -------------------------------------------------------------------------- */
 /*                              contenido footer                              */
 /* -------------------------------------------------------------------------- */
-footer.footer{
+footer.footer {
     height: 80px;
     width: 100%;
-    background-color:#000;
+    background-color: #000;
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 0;
 }
-.footer .logo-footer{
+
+.footer .logo-footer {
     width: 70px;
     height: 70px;
 }
-.copyright{
+
+.copyright {
     font-size: 2rem;
     color: #FFF;
 }
-.social-media ul{
+
+.social-media ul {
     display: flex;
 }
-.social-media a{
+
+.social-media a {
     text-decoration: none;
 }
-.social-media a:hover i{
+
+.social-media a:hover i {
     color: #1fde82;
 }
-.social-media a i{
+
+.social-media a i {
     font-size: 4rem;
     color: white;
 }
-.social-media ul li{
+
+.social-media ul li {
     margin-left: 20px;
 }
-.social-media ul li:first-child{
+
+.social-media ul li:first-child {
     margin-left: 0;
 }
 
 /* -------------------------------------------------------------------------- */
 /*                           Pagina de curiosidades                           */
 /* -------------------------------------------------------------------------- */
-.header-two{
+.header-two {
     height: 150px;
     width: 100%;
     position: relative;
     background-color: #59d359;
 }
-.header-two .enlaces a{
+
+.header-two .enlaces a {
     color: white;
     font-weight: 400;
 }
-.main-curiosidad{
+
+.main-curiosidad {
     width: 100%;
-    background-color: lightgreen;
+    background: #E6DADA;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #59d359, #E6DADA);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #59d359, #E6DADA);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     margin: auto;
 }
-.article-gen{
+
+.article-gen {
     background-color: white;
     border-radius: 10px;
     display: flex;
@@ -446,39 +520,47 @@ footer.footer{
     margin-top: 20px;
     padding: 20px 40px;
 }
-.title-curiosidad{
+
+.title-curiosidad {
     display: flex;
     width: 100%;
     justify-content: center;
 }
-.title-curiosidad h1{
+
+.title-curiosidad h1 {
     text-align: center;
     font-size: 40px;
 }
-.article{
+
+.article {
     border-radius: 25px;
     margin: auto;
     padding: 20px;
     margin-bottom: 30px;
     height: auto;
 }
-.article h3{
+
+.article h3 {
     text-align: left;
+    font-weight: 600;
     margin-bottom: 20px;
 }
-.article article{
+
+.article article {
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
 }
-.article img{
+
+.article img {
     transform: translateY(-20px);
     max-height: 250px;
     width: 300px;
 }
-.article p{
+
+.article p {
     margin-right: 60px;
     margin-left: 30px;
     width: 450px;
@@ -486,13 +568,14 @@ footer.footer{
     font-size: 20px;
 }
 
-.article-curiosidad a{
+.article-curiosidad a {
     display: inline;
     color: #ff2800;
     text-decoration: none;
     font-weight: 600;
     font-size: 18px;
 }
+
 @keyframes animat {
     0% {
         transform: scale(0);
@@ -502,29 +585,36 @@ footer.footer{
         transform: scale(1);
     }
 }
+
 /* Responsive */
-@media screen and (max-width:900px){
-    .header.inicio{
+@media screen and (max-width:900px) {
+    .header.inicio {
         background-position: center center;
     }
-    .enlaces a{
+
+    .enlaces a {
         font-size: 15px;
     }
-    .curiosidad h3{
+
+    .curiosidad h3 {
         font-size: 3rem;
     }
-    .curiosidad p{
+
+    .curiosidad p {
         font-size: 1.7rem;
     }
-    .about-product{
+
+    .about-product {
         height: 100vh;
     }
 }
-@media screen and (max-width:768px){
-    .nav-two .enlaces{
+
+@media screen and (max-width:768px) {
+    .nav-two .enlaces {
         width: 100%;
     }
-    .enlaces{
+
+    .enlaces {
         position: fixed;
         display: flex;
         flex-direction: column;
@@ -533,11 +623,15 @@ footer.footer{
         height: 100vh;
         width: 100%;
         transition: all .6s ease;
-        background: #59d359;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #59d359, #33cc33);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #59d359, #33cc33); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: #59d359;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #59d359, #33cc33);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #59d359, #33cc33);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
-    .enlaces a{
+
+    .enlaces a {
         text-align: center;
         width: 100%;
         color: #fff;
@@ -545,23 +639,28 @@ footer.footer{
         font-weight: 400;
         border: none;
     }
-    .enlaces a:hover{
+
+    .enlaces a:hover {
         background-color: rgba(0, 0, 0, .1);
         border: none;
     }
-    .uno{
+
+    .uno {
         -webkit-clip-path: circle(0% at 100% 0);
         clip-path: circle(0% at 100% 0);
     }
-    .dos{
+
+    .dos {
         -webkit-clip-path: circle(150% at 100% 0);
         clip-path: circle(150% at 100% 0);
     }
+
     .nav .logo,
-    .nav-two  .logo{
+    .nav-two .logo {
         margin-left: 10px;
     }
-    .hamburger{
+
+    .hamburger {
         height: 60px;
         width: 60px;
         display: flex;
@@ -574,105 +673,140 @@ footer.footer{
         cursor: pointer;
         margin-right: 20px;
     }
-    .text-header{
+
+    .text-header {
         bottom: 0;
     }
-    .curiosidad h3{
+
+    .curiosidad h3 {
         font-size: 3rem;
     }
-    .curiosidad p{
+
+    .curiosidad p {
         font-size: 1.5rem;
     }
-    .contenido-curiosidad{
+
+    .contenido-curiosidad {
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     }
-    .content-product{
+
+    .content-product {
         height: auto;
         min-height: 600px;
         background-color: rgba(0, 0, 0, .7);
     }
-    .about-product{
+
+    .about-product {
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     }
-    .contenido-product{
+
+    .contenido-product {
         margin-top: 80px;
     }
-    .article{
+
+    .article {
         margin: 0;
         margin-bottom: 30px;
         width: 100%;
     }
-    .article article{
+
+    .article article {
         flex-direction: column;
     }
-    .article h3{
+
+    .article h3 {
         margin-bottom: 30px;
     }
-    .article article img{
+
+    .article article img {
         width: 100%;
     }
-    .article article p{
+
+    .article article p {
         margin: 0;
         max-width: 100%;
         height: auto;
     }
 
 }
-@media screen and (max-width:680px){
-    .contenido-product{
+
+@media screen and (max-width:680px) {
+    .contenido-product {
         margin-top: 50px;
     }
-    .contenido-curiosidad{
+
+    .contenido-curiosidad {
         flex-direction: column;
     }
-    .imgen{
+
+    .imgen {
         width: 100%;
     }
-    .curiosidad{
+
+    .curiosidad {
         width: 100%;
     }
-    .article-curiosidad{
+
+    .article-curiosidad {
         flex-direction: column;
     }
-    .article-curiosidad:nth-child(odd){
+
+    .article-curiosidad:nth-child(odd) {
         flex-direction: column;
     }
-    .article-curiosidad img{
+
+    .article-curiosidad img {
         width: 100%;
     }
-    .cont-article h3{
+
+    .cont-article h3 {
         padding-top: 15px;
     }
-    .cont-article{
+
+    .cont-article {
         width: 100%;
     }
-    .cont-article p{
+
+    .cont-article p {
         margin: 0;
     }
 }
-@media screen and (max-width:500px){
-    .about-product p{
+
+@media screen and (max-width:500px) {
+    .about-product p {
         font-size: 1.8rem;
     }
-    .footer{
+
+    .footer {
         height: auto;
         flex-direction: column-reverse;
     }
-    .logo-footer{
+
+    .logo-footer {
         display: none;
     }
-    .social-media{
+
+    .social-media {
         margin-top: 15px;
     }
-    .copyright{
+
+    .copyright {
         margin-top: 10px;
     }
-    .article-gen{
+
+    .article-gen {
         padding: 20px 0;
+        margin: 0 auto;
+        width: 90%;
     }
-    .title-curiosidad h1{
-        font-size: 30px;
+
+    .title-curiosidad h1 {
+        font-size: 35px;
+        font-weight: 700;
+    }
+
+    .article h3 {
+        font-size: 20px;
     }
 
 }
-
