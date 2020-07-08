@@ -1,0 +1,366 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.watsap {
+  text-decoration: none;
+  position: fixed;
+  left: 2rem;
+  bottom: 2rem;
+  background-color: #00bb2d;
+  border-radius: 100%;
+  font-size: 7rem;
+  z-index: 1;
+  padding: 1rem;
+  height: 100px;
+  display: none;
+}
+
+.watsap a {
+  text-decoration: none;
+  color: white;
+}
+
+.Encabezado {
+  width: 100%;
+  max-width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-weight: 600;
+  height: 13rem;
+  overflow: hidden;
+}
+
+.nav {
+  width: inherit;
+}
+
+.navegacion .logo {
+  color: white;
+  font-size: 3rem;
+}
+
+.navegacion .nav a {
+  display: flex;
+  color: white;
+  font-size: 2rem;
+}
+
+/* Slider */
+
+#slide1 {
+  transition: all 0.8s;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  font-weight: 600;
+  height: 40rem;
+  background-image: url(../img/slide2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  object-fit: cover;
+  background-position: center center;
+}
+
+/* #slide1 img {
+    height: 100%;
+  }
+  #slide1 p {
+    padding-top: 15rem;
+    padding-left: 10rem;
+    font-family: 'Satisfy', cursive;
+    font-size: 3.7rem;
+    color: #00000080;
+    font-weight: 400;
+  } */
+#slide2 {
+  transition: all 0.8s;
+  background-image: url(../img/slide1.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: green;
+  font-weight: 600;
+  width: 100%;
+  height: 40rem;
+  /* background: green; */
+}
+
+/* #slide2 img {
+    height: 100%;
+  }
+  #slide2 p {
+    padding-top: 15rem;
+    padding-right: 10rem;
+    font-family: 'Satisfy', cursive;
+    font-size: 40px;
+    color: white;
+    font-weight: 400;
+  } */
+.container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  max-height: 40rem;
+  margin-bottom: 10px;
+}
+
+.container .slider {
+  position: relative;
+  font-weight: 600;
+  height: 40rem;
+}
+
+.container .slider li {
+  position: absolute;
+  opacity: 0;
+}
+
+.container .slider li:first-child {
+  opacity: 1;
+}
+
+.container .slider li:target {
+  opacity: 1;
+}
+
+.menu {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  bottom: 0px;
+}
+
+.menu li {
+  display: inline-block;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.menu li a {
+  font-family: "Satisfy", cursive;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  background-color: grey;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 20px;
+  border-radius: 100%;
+  opacity: 0.7;
+}
+
+/* asasdas */
+.main-productos {
+  padding: 20px;
+  position: relative;
+  text-align: center;
+}
+
+.title-main-productos {
+  color: green;
+  /* background-color: hotpink; */
+  padding: 15px;
+}
+
+/* Productos */
+.contenedor-productos {
+  padding-top: 30px;
+  width: 90%;
+  height: auto;
+  margin: auto;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-family: "Nunito", sans-serif;
+}
+
+.prod {
+  width: 350px;
+  height: auto;
+  max-height: 535px;
+  max-width: 350px;
+  margin-bottom: 60px;
+  transition: all 0.8s;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.prod:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.nombre-producto {
+  background-color: #513530;
+  color: white;
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 5px;
+}
+
+.prod-header img {
+  width: inherit;
+  height: 250px;
+  padding: 0 8rem;
+  /* text-align: center; */
+}
+
+.prod-body {
+  padding: 5px;
+}
+
+.prod-body .precio {
+  font-family: "Nunito", sans-serif;
+  color: green;
+  font-weight: bold;
+  text-align: center;
+}
+
+.prod-body .description {
+  padding: 0 0px;
+  font-size: 1.7rem;
+}
+
+.prod-body .cont-cant {
+  padding-top: 10px;
+  display: flex;
+  height: auto;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.cont-cant label {
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: green;
+}
+
+.cont-cant input {
+  font-size: 1.7rem;
+  text-align: center;
+  border-radius: 4px;
+  width: 5rem;
+  height: 3.8rem;
+}
+
+.agregar-carrito,
+.ver-carrito {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 7.5px;
+  margin-bottom: 7.5px;
+  width: 80%;
+  height: 45px;
+  font-size: 2rem;
+  font-weight: 600;
+  background-color: green;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.ver-carrito {
+  border: none;
+  position: fixed;
+  right: 50px;
+  bottom: 0;
+  width: 200px;
+  opacity: 0;
+  transition: .5s ease-in-out;
+}
+
+.agregar-carrito i,
+.ver-carrito i {
+  font-size: 3rem;
+  margin-right: 10px;
+}
+
+.agregar-carrito:hover,
+.ver-carrito:hover {
+  background-color: #055519;
+}
+
+/* button,
+.carrito {
+  font-family: "Nunito", sans-serif;
+  background-color: green;
+  font-size: 2rem;
+  padding: 0.5rem;
+  color: white;
+  border-style: none;
+  border-radius: 1rem;
+}
+.final {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-right: 4rem;
+  text-align: right;
+}
+
+.cantidad {
+  display: flex;
+}
+.cantidad p {
+  padding-right: 1rem;
+  padding-top: 1rem;
+  color: green;
+}
+.carrito {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} */
+.pushbar.pushbar-carrito {
+  width: 350px;
+  background-color: #000;
+}
+
+.pushbar-carrito {
+  font-size: 18px;
+  color: white;
+}
+
+.pushbar-carrito .titulo {
+  font-size: 22px;
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 1px solid rgba(112, 112, 112, 0.6);
+  margin-bottom: 20px;
+}
+.pushbar-carrito .contenedor-items{
+
+}
+.pushbar-carrito .item {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px;
+  height: 130px;
+  border-bottom: 1px solid rgba(112, 112, 112, 0.6);
+}
+.pushbar-carrito .item img {
+  width: 100%;
+  max-width: 85px;
+}
+.pushbar-carrito .textos{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.pushbar-carrito .total{
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+}

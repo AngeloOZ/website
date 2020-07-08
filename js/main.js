@@ -1,6 +1,14 @@
 const btnUp = document.getElementById('btnUp');
+const carrito = document.getElementById('ver-carrito');
 window.addEventListener('scroll',function(){
     btnUp.classList.toggle('active', window.scrollY > 500)
+    if(window.scrollY > 200){
+        console.log("hola");
+        carrito.style.opacity = 1;
+    }else{
+
+    }
+
 })
 function scrollTotop(){
     window.scrollTo({
