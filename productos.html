@@ -24,9 +24,9 @@
         <div class="contenedor">
             <div class="contenido-header">
                 <div class="navegacion">
-                    <a href="index.html" class="logo"><img src="./img/NutriMixs.png" alt=""><span>Nutri Mix</span></a>
+                    <!-- <a href="index.html" class="logo"><img src="./img/NutriMixs.png" alt=""><span>Nutri Mix</span></a> -->
                     <nav class="nav">
-                        <a href="#compra">Su Te amo compra: &emsp; <p id="unidades">0</p>- <p id="total">0,00$<p></a>
+                        <a href="#compra">Su compra: &emsp; <p id="unidades">0</p>- <p id="total">0,00$<p></a>
                     </nav>
                 </div>
             </div>
@@ -35,8 +35,6 @@
     <div class=container>
         <ul class=slider>
             <li id="slide1">
-                <!-- <p>Realizamos entregas a domicilio <br> en todo Santo Domingo</p><img src="./img/domicilio.png" alt=""> -->
-
             </li>
             <li id="slide2">
             </li>
@@ -53,7 +51,7 @@
 
     <main class="main-productos">
         <h2 class="title-main-productos"> Nuestros Productos</h2>
-        <section class="contenedor-productos" id="contenedor-productos">
+        <div class="contenedor-productos" id="contenedor-productos-all">
             <div class="prod">
                 <div class="prod-header">
                     <h3 class="nombre-producto">Granola 200gr</h3>
@@ -66,31 +64,16 @@
                     <p>
                     <div class="cont-cant">
                         <label for="cant">Cantidad: </label>
-                        <input type="number" id="cant" value="1" name="cantidad" min="1" step="1">
+                        <!-- <input type="number" id="cant" value="1" name="cantidad" min="1" step="1"> -->
+                        <select>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                        </select>
                     </div>
-                    <button href="" class="agregar-carrito" data-id="1" id="agregar-carrito">
-                        <i class='bx bxs-cart-add'></i>
-                        <span> Agregar al Carrito</span>
-                    </button>
-                </div>
-            </div>
-            <div class="prod">
-                <div class="prod-header">
-                    <h3 class="nombre-producto">Granola 200gr</h3>
-                    <img src="./img/mix3.jpg" alt="">
-                </div>
-                <div class="prod-body">
-                    <h4 class="precio">0,99$</h4>
-                    <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem quod quidem
-                        animi labore quam nisi quasi magni sit. Eaque similique harum repellendus.
-                    <p>
-                    <div class="cont-cant">
-                        <label for="cant">Cantidad: </label>
-                        <input type="number" id="cant" value="1" name="cantidad" min="1" step="1">
-                    </div>
-                    <a href="" class="agregar-carrito" data-id="2" id="agregar-carrito">
-                        <i class='bx bxs-cart-add'></i>
-                        <span> Agregar al Carrito</span>
+                    <a href="" class="agregar-carrito" data-id="1" id="agregar-carrito"> 
                     </a>
                 </div>
             </div>
@@ -109,8 +92,24 @@
                         <input type="number" id="cant" value="1" name="cantidad" min="1" step="1">
                     </div>
                     <a href="" class="agregar-carrito" data-id="2" id="agregar-carrito">
-                        <i class='bx bxs-cart-add'></i>
-                        <span> Agregar al Carrito</span>
+                    </a>
+                </div>
+            </div>
+            <div class="prod">
+                <div class="prod-header">
+                    <h3 class="nombre-producto">Granola 200gr</h3>
+                    <img src="./img/mix3.jpg" alt="">
+                </div>
+                <div class="prod-body">
+                    <h4 class="precio">0,99$</h4>
+                    <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem quod quidem
+                        animi labore quam nisi quasi magni sit. Eaque similique harum repellendus.
+                    <p>
+                    <div class="cont-cant">
+                        <label for="cant">Cantidad: </label>
+                        <input type="number" id="cant" value="1" name="cantidad" min="1" step="1">
+                    </div>
+                    <a href="" class="agregar-carrito" data-id="2" id="agregar-carrito">
                     </a>
                 </div>
             </div>
@@ -129,8 +128,6 @@
                         <input type="number" id="cant" value="1" name="cantidad" min="1" step="1">
                     </div>
                     <a href="" class="agregar-carrito" data-id="4" id="agregar-carrito">
-                        <i class='bx bxs-cart-add'></i>
-                        <span> Agregar al Carrito</span>
                     </a>
                 </div>
             </div>
@@ -149,8 +146,6 @@
                         <input type="number" id="cant" value="1" name="cantidad" min="1" step="1">
                     </div>
                     <a href="" class="agregar-carrito" data-id="5" id="agregar-carrito">
-                        <i class='bx bxs-cart-add'></i>
-                        <span> Agregar al Carrito</span>
                     </a>
                 </div>
             </div>
@@ -169,8 +164,6 @@
                         <input type="number" id="cant" value="1" name="cantidad" min="1" step="1">
                     </div>
                     <a href="" class="agregar-carrito" data-id="6" id="agregar-carrito">
-                        <i class='bx bxs-cart-add'></i>
-                        <span> Agregar al Carrito</span>
                     </a>
                 </div>
             </div>
@@ -186,14 +179,15 @@
         <span class="bx bxs-x-circle btn-cerrar-cart" data-pushbar-close></span>
         <p class="titulo">Carrito de compras</p>
         <div class="contenedor-items">
-            <div class="item">
+            <!-- <div class="item">
                 <a href="#" class="bx bxs-x-circle btn-eliminar-prod"></a>
                 <img src="./img/producto1.jpg" alt="">
                 <div class="textos">
                     <p class="nombre-item">Granola 200gr</p>
-                    <p>$0.99</p>
+                    <p>Cantidad: 1</p>
+                    <p>Precio: $0.99</p>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div class="total">
             <p>Total:</p>

@@ -1,6 +1,6 @@
 const carro = new Carrito();
 const btnCarrito = document.getElementById('ver-carrito');
-const productos = document.getElementById('contenedor-productos');
+const productos = document.getElementById('contenedor-productos-all');
 const listarProductos = document.querySelector('#listado-carrito .contenedor-items');
 
 IniciarProceso();

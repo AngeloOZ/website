@@ -207,8 +207,7 @@
 .prod-header img {
   width: inherit;
   height: 250px;
-  padding: 0 8rem;
-  /* text-align: center; */
+  padding: 0 8rem;  
 }
 
 .prod-body {
@@ -267,7 +266,18 @@
   text-decoration: none;
   border-radius: 10px;
 }
-
+.agregar-carrito::before{
+  content: '';
+  background-image: url(../img/buy.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+}
+.agregar-carrito::after{
+  content: 'Agregar al Carrito';
+  margin-left: 10px;
+}
 .ver-carrito {
   border: none;
   position: fixed;
@@ -278,7 +288,6 @@
   transition: .5s ease-in-out;
 }
 
-.agregar-carrito i,
 .ver-carrito i {
   font-size: 3rem;
   margin-right: 10px;
