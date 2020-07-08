@@ -290,37 +290,6 @@
   background-color: #055519;
 }
 
-/* button,
-.carrito {
-  font-family: "Nunito", sans-serif;
-  background-color: green;
-  font-size: 2rem;
-  padding: 0.5rem;
-  color: white;
-  border-style: none;
-  border-radius: 1rem;
-}
-.final {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  margin-right: 4rem;
-  text-align: right;
-}
-
-.cantidad {
-  display: flex;
-}
-.cantidad p {
-  padding-right: 1rem;
-  padding-top: 1rem;
-  color: green;
-}
-.carrito {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-} */
 .pushbar.pushbar-carrito {
   width: 350px;
   background-color: #000;
@@ -351,7 +320,7 @@
 .pushbar-carrito .item:hover{
   background-color: crimson;
 }
-.pushbar-carrito .item:hover .btn-cerrar-cart{
+.pushbar-carrito .item:hover .btn-eliminar-prod{
   display: block;
   transition: .5s ease-in-out;
 }

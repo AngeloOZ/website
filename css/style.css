@@ -806,9 +806,18 @@ footer.footer {
         font-size: 35px;
         font-weight: 700;
     }
-
+    
     .article h3 {
         font-size: 20px;
+    }
+    .slider{
+        display: none;
+    }
+    .prod{
+        max-height: 650px !important;
+    }
+    .contenedor-productos{
+        width: 100%;
     }
 
 }
