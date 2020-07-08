@@ -1,9 +1,20 @@
-const carrito = document.getElementById('ver-carrito');
-window.addEventListener('scroll',function(){
-    if(window.scrollY > 500){
-        console.log("hola");
-        carrito.style.opacity = 1;
-    }else{
-        carrito.style.opacity = 0;
-    }   
-})
+class Carrito{
+
+    
+    
+    
+    formato(){
+        const div = document.createElement('div');
+        div.classList.add('item') ;
+        div.innerHTML = `
+    
+                <img src="./img/producto1.jpg" alt="">
+                <div class="textos">
+                    <p class="nombre-item">Granola 200gr</p>
+                    <p>$0.99</p>
+                </div>
+        `;
+        listarProductos.appendChild(div);
+    }
+    
+}
