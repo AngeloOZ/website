@@ -3,8 +3,11 @@ const btnCarrito = document.getElementById('ver-carrito');
 const productos = document.getElementById('contenedor-productos-all');
 const listarProductos = document.querySelector('#listado-carrito .contenedor-items');
 const btnVaciarCarrito = document.getElementById('vaciar-carrito');
+const etiquetaPrecio = document.getElementById('valor-total');
+const btnRealizarPedido = document.getElementById('realizar-pedido');
 
 IniciarProceso();
+
 
 function IniciarProceso(){
     productos.addEventListener('click', (e)=>{carro.comprarProducto(e)});
@@ -15,6 +18,7 @@ function IniciarProceso(){
 
     document.addEventListener('DOMContentLoaded', carro.leerLocalStorage());
 
+    btnRealizarPedido.addEventListener('click', (e)=>{carro.prepararPedido(e)});
 }
 
 window.addEventListener('scroll',function(){

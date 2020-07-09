@@ -247,25 +247,26 @@
         </div>
         <div class="total">
             <p>Total:</p>
-            <p class="total-precio">$0.99</p>
+            <p class="total-precio" id="valor-total">$0.00</p>
         </div>
+        <!-- data-pushbar-close -->
         <div class="btn-compras">
-            <a href="#" data-pushbar-close class="btn btn-danger" id="vaciar-carrito">Vaciar Carrito</a>
+            <a href="#" class="btn btn-danger" id="vaciar-carrito">Vaciar Carrito</a>
             <a href="#" class="btn btn-success" id="realizar-pedido">Realizar Pedido</a>
         </div>
     </div>
 
     <script src="./js/sweetalert2.all.min.js"></script>
     <script src="./js/pushbar.js"></script>
+    <script src="./js/carrito.js"></script>
+    <script src="./js/pedido.js"></script>
+    <script src="./js/compra.js"></script>
     <script type="text/javascript">
         const pushbar = new Pushbar({
             blur: true,
             overlay: true
         });
     </script>
-    <script src="./js/carrito.js"></script>
-    <script src="./js/pedido.js"></script>
-    <script src="./js/compra.js"></script>
 </body>
 
 </html>

@@ -34,7 +34,7 @@ div#btnUp div {
 
 div#btnUp i {
     color: #fff;
-    font-size: 4.5rem;
+    font-size: 45px;
 }
 
 div#btnUp:hover {
@@ -49,7 +49,7 @@ div#btnUp.active {
 
 /** Utilidades */
 html {
-    font-size: 62.5%;
+    /* font-size: 62.5%; */
     /* Reset para REMS - 62.5% = 10px de 16px */
     scroll-behavior: smooth;
 }
@@ -63,19 +63,19 @@ img {
 }
 
 h1 {
-    font-size: 3.8rem;
+    font-size: 38px;
 }
 
 h2 {
-    font-size: 3.4rem;
+    font-size: 34px;
 }
 
 h3 {
-    font-size: 3rem;
+    font-size: 30px;
 }
 
 h4 {
-    font-size: 2.6rem;
+    font-size: 26px;
 }
 
 .fw-300 {
@@ -88,8 +88,8 @@ h4 {
 }
 
 .section {
-    padding-bottom: 2rem;
-    padding-top: 2rem;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 .btn {
@@ -97,8 +97,8 @@ h4 {
     color: black;
     background-color: #fff;
     display: block;
-    width: 25rem;
-    font-size: 2rem;
+    width: 250px;
+    font-size: 20px;
     text-decoration: none;
     padding: 10px 20px;
 }
@@ -111,7 +111,7 @@ h4 {
 
 /** Fin utilidades */
 .contenedor {
-    max-width: 140rem;
+    max-width: 1400px;
     width: 90%;
     margin: 0 auto;
 }
@@ -121,7 +121,7 @@ h4 {
     background-image: url(../img/banner1.jpg);
     background-size: cover;
     height: 100vh;
-    min-height: 60rem;
+    min-height: 600px;
 }
 
 .header {
@@ -173,7 +173,7 @@ h4 {
 }
 
 .enlaces a {
-    font-size: 2.3rem;
+    font-size: 23px;
     font-weight: 600;
     color: #048306;
     text-decoration: none;
@@ -204,7 +204,7 @@ h4 {
 
 .text-header {
     position: absolute;
-    font-size: 4.5rem;
+    font-size: 45px;
     color: #513530;
     font-family: 'Satisfy', cursive;
     user-select: none;
@@ -252,13 +252,12 @@ h4 {
 }
 .contenido-product h1{
     color: white;
-    /* font-size: 2.3rem; */
 }
 .about-product p {
     text-align: justify;
     color: white;
     width: 100%;
-    font-size: 2.2rem;
+    font-size: 22px;
 }
 
 .about-product .btn-productos {
@@ -280,8 +279,8 @@ h4 {
     display: block;
     position: absolute;
     top: 0;
-    left: -25rem;
-    width: 25rem;
+    left: -250px;
+    width: 250px;
     height: 50px;
     transition: .5s ease;
 }
@@ -322,29 +321,29 @@ h4 {
 
 .curiosidad {
     text-align: center;
-    padding: 2.5rem;
+    padding: 25px;
 }
 
 .curiosidad h3 {
-    font-size: 4rem;
-    padding-bottom: 2rem;
+    font-size: 40px;
+    padding-bottom: 20px;
 }
 
 .curiosidad p {
     text-align: justify;
-    font-size: 2rem;
+    font-size: 20px;
 }
 .curiosidad .btn-curiosidad {
     position: relative;
     background-color: transparent;
-    margin-top: 2rem;
+    margin-top: 20px;
     border: 1px solid #000;
     color: #000;
     font-weight: 700;
     height: 50px;
     transition: .5s ease;
     overflow: hidden;
-    margin: 2rem auto 0 auto;
+    margin: 20px auto 0 auto;
 }
 
 .curiosidad .btn-curiosidad::before {
@@ -353,8 +352,8 @@ h4 {
     display: block;
     position: absolute;
     top: 0;
-    left: -25rem;
-    width: 25rem;
+    left: -250px;
+    width: 250px;
     height: 50px;
     transition: .5s ease;
 }
@@ -377,7 +376,7 @@ h4 {
     display: flex;
     flex-flow: wrap row;
     justify-content: space-evenly;
-    padding: 5rem 0;
+    padding: 50px 0;
 }
 
 .producto {
@@ -389,7 +388,7 @@ h4 {
     border-radius: 5px;
     padding: 0;
     transition: .5s ease-in all;
-    margin-bottom: 10rem;
+    margin-bottom: 100px;
 }
 
 .producto:hover {
@@ -425,15 +424,15 @@ h4 {
     color: white;
     padding: 10px 0;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 25px;
     font-weight: 300;
 }
 
 .descripcion .textos-productos {
     color: white;
-    padding: 2rem 1rem;
+    padding: 20px 10px;
     text-align: justify;
-    font-size: 1.5rem;
+    font-size: 15px;
     visibility: hidden;
 }
 
@@ -456,7 +455,7 @@ footer.footer {
 }
 
 .copyright {
-    font-size: 2rem;
+    font-size: 20px;
     color: #FFF;
 }
 
@@ -473,7 +472,7 @@ footer.footer {
 }
 
 .social-media a i {
-    font-size: 4rem;
+    font-size: 40px;
     color: white;
 }
 
@@ -599,11 +598,11 @@ footer.footer {
     }
 
     .curiosidad h3 {
-        font-size: 3rem;
+        font-size: 30px;
     }
 
     .curiosidad p {
-        font-size: 1.7rem;
+        font-size: 17px;
     }
 
     .about-product {
@@ -681,11 +680,11 @@ footer.footer {
     }
 
     .curiosidad h3 {
-        font-size: 3rem;
+        font-size: 30px;
     }
 
     .curiosidad p {
-        font-size: 1.5rem;
+        font-size: 15px;
     }
 
     .contenido-curiosidad {
@@ -776,7 +775,7 @@ footer.footer {
 
 @media screen and (max-width:500px) {
     .about-product p {
-        font-size: 1.8rem;
+        font-size: 18px;
     }
 
     .footer {

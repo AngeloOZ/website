@@ -1,4 +1,5 @@
 class Carrito {
+
     comprarProducto(e) {
         e.preventDefault();
         if (e.target.classList.contains('agregar-carrito')) {
@@ -30,41 +31,64 @@ class Carrito {
         `;
         listarProductos.appendChild(div);
         this.guardarProductosLocalStorage(producto);
+        this.calcularTotal();
     }
     eliminarProducto(e) {
         e.preventDefault();
-        Swal.fire({
-            title: '¿Estas seguro de quitar este producto del carrito?',
-            text: "No podrás revertir esto",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Si, estoy seguro'
-        }).then((result) => {
-            if (result.value) {
-                let producto, productoID;
-                if (e.target.classList.contains('btn-eliminar-prod')) {
+        let producto, productoID;
+        if (e.target.classList.contains('btn-eliminar-prod')) {
+            Swal.fire({
+                title: '¿Estas seguro de quitar este producto del carrito?',
+                text: "No podrás revertir esto",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Si, estoy seguro',
+                cancelButtonText: 'Cancelar'
+
+            }).then((result) => {
+                if (result.value) {
                     e.target.parentElement.remove();
                     producto = e.target.parentElement;
                     productoID = producto.querySelector('a').getAttribute('data-id');
+                    Swal.fire(
+                        'Borrado!',
+                        'Se quitó el producto de tu carrito',
+                        'success'
+                    );
+                    this.eliminarProductoLocalStorage(productoID);
+                    this.calcularTotal();
                 }
-                this.eliminarProductoLocalStorage(productoID);
-                Swal.fire(
-                    'Borrado!',
-                    'Se quitó el producto de tu carrito',
-                    'success'
-                )
-            }
-        })
+            })
+        }
     }
 
     vaciarCarrito(e) {
         e.preventDefault();
-        while (listarProductos.firstChild) {
-            listarProductos.removeChild(listarProductos.firstChild);
-        }
-        this.vaciarLocalStorage();
+        Swal.fire({
+            title: '¿Estas Seguro de vaciar el Carrito?',
+            text: "No se puede revertir esta acción!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si, vaciar carrito',
+            cancelButtonText: 'Cancelar'
+          }).then((result) => {
+            if (result.value) {
+                while (listarProductos.firstChild) {
+                    listarProductos.removeChild(listarProductos.firstChild);
+                }
+                this.vaciarLocalStorage();
+                this.calcularTotal();
+                Swal.fire(
+                    'Borrado!',
+                    'Tu carrito ahora está vacío.',
+                    'success'
+                )
+            }
+          })
         return false;
     }
     guardarProductosLocalStorage(producto) {
@@ -99,6 +123,7 @@ class Carrito {
             `;
             listarProductos.appendChild(div);
         });
+        this.calcularTotal();
     }
     eliminarProductoLocalStorage(productoID) {
         let productosLS;
@@ -114,5 +139,29 @@ class Carrito {
     }
     vaciarLocalStorage() {
         localStorage.clear();
+    }
+    calcularTotal(){
+        let productosLS;
+        let total = 0;
+        productosLS = this.obtenerProductosLocalStorage();
+        for(let i = 0; i < productosLS.length; i++){
+            let element = Number(productosLS[i].precio.replace('$','').replace(',','.') * productosLS[i].cantidad.replace('$','').replace(',','.'));
+            total += element;
+        }
+        etiquetaPrecio.innerHTML = `$${total.toFixed(2)}`;
+    }
+    prepararPedido(e){
+        e.preventDefault();
+        let productosLS;
+        let pedido='';
+        productosLS = this.obtenerProductosLocalStorage();
+        productosLS.forEach(function(producto){
+            let total = Number(producto.precio.replace('$','').replace(',','.') * producto.cantidad.replace('$','').replace(',','.'));
+            pedido+=`------------------------------------\n`;
+            pedido += `Nombre: ${producto.titulo}\nCantidad: ${producto.cantidad}\nPrecio: $${producto.precio}\nTotal: $${total}\n`;
+            pedido+=`------------------------------------\n`;
+        });
+        pedido+=`Total: $${etiquetaPrecio.textContent}`
+        console.log(pedido);
     }
 }
