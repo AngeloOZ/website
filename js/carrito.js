@@ -75,7 +75,7 @@ class Carrito {
             cancelButtonColor: '#d33',
             confirmButtonText: 'Si, vaciar carrito',
             cancelButtonText: 'Cancelar'
-          }).then((result) => {
+        }).then((result) => {
             if (result.value) {
                 while (listarProductos.firstChild) {
                     listarProductos.removeChild(listarProductos.firstChild);
@@ -88,7 +88,7 @@ class Carrito {
                     'success'
                 )
             }
-          })
+        })
         return false;
     }
     guardarProductosLocalStorage(producto) {
@@ -140,28 +140,52 @@ class Carrito {
     vaciarLocalStorage() {
         localStorage.clear();
     }
-    calcularTotal(){
+    calcularTotal() {
         let productosLS;
         let total = 0;
         productosLS = this.obtenerProductosLocalStorage();
-        for(let i = 0; i < productosLS.length; i++){
-            let element = Number(productosLS[i].precio.replace('$','').replace(',','.') * productosLS[i].cantidad.replace('$','').replace(',','.'));
+        for (let i = 0; i < productosLS.length; i++) {
+            let element = Number(productosLS[i].precio.replace('$', '').replace(',', '.') * productosLS[i].cantidad.replace('$', '').replace(',', '.'));
             total += element;
         }
         etiquetaPrecio.innerHTML = `$${total.toFixed(2)}`;
     }
-    prepararPedido(e){
+    prepararPedido(e) {
         e.preventDefault();
-        let productosLS;
-        let pedido='';
-        productosLS = this.obtenerProductosLocalStorage();
-        productosLS.forEach(function(producto){
-            let total = Number(producto.precio.replace('$','').replace(',','.') * producto.cantidad.replace('$','').replace(',','.'));
-            pedido+=`------------------------------------\n`;
-            pedido += `Nombre: ${producto.titulo}\nCantidad: ${producto.cantidad}\nPrecio: $${producto.precio}\nTotal: $${total}\n`;
-            pedido+=`------------------------------------\n`;
-        });
-        pedido+=`Total: $${etiquetaPrecio.textContent}`
-        console.log(pedido);
+        let total;
+        total = etiquetaPrecio.textContent;
+        if (total.replace('$', '') == '0.00') {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Tu carrito está vacío!',
+            })
+        } else {
+            let productosLS;
+            let pedido = '';
+            let enlace = 'https://api.whatsapp.com/send?phone=593983361683&text='
+            productosLS = this.obtenerProductosLocalStorage();
+            productosLS.forEach(function (producto) {
+                let total = Number(producto.precio.replace('$', '') * producto.cantidad.replace('$', ''));
+                pedido += `------------------------------------\n`;
+                pedido += `Nombre: ${producto.titulo}\nCantidad: ${producto.cantidad}\nPrecio: ${producto.precio}\nTotal: $${total}\n`;
+                pedido += `------------------------------------\n`;
+            });
+            pedido += `Total: ${etiquetaPrecio.textContent}`
+            let textoenlace = pedido.replace(/\n/gi, '%0d%0a').replace(/:/gi, '%3a').replace(/ /gi, '%20').replace(/$/gi, '%24');
+            enlace += textoenlace;
+            Swal.fire({
+                title: 'Su pedido',
+                text: "fue procesado",
+                icon: 'success',
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'OK'
+            }).then((result) => {
+                if (result.value) {
+                    window.open(enlace, '_blank')
+                }
+            })
+        }
     }
 }
