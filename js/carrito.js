@@ -184,7 +184,27 @@ class Carrito {
                 cancelButtonColor: '#d33',
                 confirmButtonText: 'OK'
             }).then((result) => {
-                window.open(enlace, '_blank')
+                // Email.send({
+                //     Host : "smtp.gmail.com",
+                //     Username : "nutrimixsec@gmail.com",
+                //     Password : "nutrimixs.2020",
+                //     To : "angelo-mjz7@hotmail.com",
+                //     From : "nutrimixsec@gmail.com",
+                //     Subject : "This is the subject",
+                //     Body : `${pedido}`
+                // }).then(
+                //   message => alert(message)
+                // );
+                // Email.send({
+                //     SecureToken : "d5425c8c-1754-4c35-83a0-2d35e9fc82b9",
+                //     From : "angelo-mjz7@hotmail.com",
+                //     To: "nutrimixsec@gmail.com",
+                //     Subject : "Pedido N# 281729921",
+                //     Body : pedido
+                // }).then(
+                //   message => alert(message)
+                // );
+                // window.open(enlace, '_blank')
                 this.vaciarLocalStorage();
                 window.location.reload();
             })
