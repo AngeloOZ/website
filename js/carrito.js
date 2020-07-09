@@ -63,7 +63,9 @@ class Carrito {
             })
         }
     }
+    vaciarCarrito2(){
 
+    }
     vaciarCarrito(e) {
         e.preventDefault();
         Swal.fire({
@@ -182,9 +184,9 @@ class Carrito {
                 cancelButtonColor: '#d33',
                 confirmButtonText: 'OK'
             }).then((result) => {
-                if (result.value) {
-                    window.open(enlace, '_blank')
-                }
+                window.open(enlace, '_blank')
+                this.vaciarLocalStorage();
+                window.location.reload();
             })
         }
     }
