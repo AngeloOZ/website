@@ -170,7 +170,7 @@ class Carrito {
             productosLS.forEach(function (producto) {
                 let total = Number(producto.precio.replace('$', '') * producto.cantidad.replace('$', ''));
                 pedido += `------------------------------------\n`;
-                pedido += `Nombre: ${producto.titulo}\nCantidad: ${producto.cantidad}\nPrecio: ${producto.precio}\nTotal: $${total}\n`;
+                pedido += `Nombre: ${producto.titulo}\nCantidad: ${producto.cantidad}\nPrecio: ${producto.precio}\nTotal: $${total.toFixed(2)}\n`;
                 pedido += `------------------------------------\n`;
             });
             pedido += `Total: ${etiquetaPrecio.textContent}`
@@ -183,30 +183,21 @@ class Carrito {
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
                 confirmButtonText: 'OK'
-            }).then((result) => {
-                // Email.send({
-                //     Host : "smtp.gmail.com",
-                //     Username : "nutrimixsec@gmail.com",
-                //     Password : "nutrimixs.2020",
-                //     To : "angelo-mjz7@hotmail.com",
-                //     From : "nutrimixsec@gmail.com",
-                //     Subject : "This is the subject",
-                //     Body : `${pedido}`
-                // }).then(
-                //   message => alert(message)
-                // );
-                // Email.send({
-                //     SecureToken : "d5425c8c-1754-4c35-83a0-2d35e9fc82b9",
-                //     From : "angelo-mjz7@hotmail.com",
-                //     To: "nutrimixsec@gmail.com",
-                //     Subject : "Pedido N# 281729921",
-                //     Body : pedido
-                // }).then(
-                //   message => alert(message)
-                // );
-                // window.open(enlace, '_blank')
+            }).then((result) => { 
+                Email.send({
+                    SecureToken: "d9afeb1f-9fa4-480a-8ca6-536386657557",
+                    To: "angelo-mjz7@hotmail.com",
+                    From: "nutrimixsec@gmail.com",
+                    Subject: "Nuevo Pedido",
+                    Body: pedido
+                }).then(
+                    console.log('Hola')
+                );
+                setTimeout(function(){
+                    window.location.reload();
+                },2000);
+                window.open(enlace,'_blank');
                 this.vaciarLocalStorage();
-                window.location.reload();
             })
         }
     }
