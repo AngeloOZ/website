@@ -8,13 +8,6 @@ const btnRealizarPedido = document.getElementById('realizar-pedido');
 
 IniciarProceso();
 
-// Swal.fire({
-//     icon: 'Procesando Compra',
-//     title: 'Oops...',
-//     text: 'Something went wrong!',
-//     footer: '<a href>Why do I have this issue?</a>'
-// })
-
 function IniciarProceso() {
     productos.addEventListener('click', (e) => {
         carro.comprarProducto(e)
