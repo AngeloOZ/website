@@ -1,11 +1,11 @@
-const compra = new Carrito();
-const listaCompra = document.querySelector("#lista-compra tbody");
-const carrito =document.getElementById('carrito');
+// const compra = new Carrito();
+// const listaCompra = document.querySelector("#lista-compra tbody");
+// const carrito =document.getElementById('carrito');
 
-cargarEventos();
+// cargarEventos();
 
-function cargarEventos(){
-    document.addEventListener('DOMContentLoaded', compra.leerLocalStorageCompra());
+// function cargarEventos(){
+//     document.addEventListener('DOMContentLoaded', compra.leerLocalStorageCompra());
     
-    carrito.addEventListener('click', (e)=>compra.eliminarProducto(e));
-}
+//     carrito.addEventListener('click', (e)=>compra.eliminarProducto(e));
+// }

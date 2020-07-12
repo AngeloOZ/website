@@ -5,11 +5,11 @@ let enlaces = document.getElementById("enlaces")
 let menu = document.getElementById("icon")
 let contador = 0;
 
-window.addEventListener('scroll',function(){
-    if(!(enlaces.classList.contains('activeMenu'))){
-        btnUp.classList.toggle('active', window.scrollY > 500)
-    }
-})
+// window.addEventListener('scroll',function(){
+//     if(!(enlaces.classList.contains('activeMenu'))){
+//         btnUp.classList.toggle('active', window.scrollY > 500)
+//     }
+// })
 function scrollTotop(){
     window.scrollTo({
         top: 0
@@ -46,3 +46,46 @@ window.addEventListener('resize',function(){
         menu.classList.remove('bx-x')
     }    
 })
+
+/* -------------------------------------------------------------------------- */
+/*                               Seccion Slider                               */
+/* -------------------------------------------------------------------------- */
+let slider = document.querySelector(".slider-cont");
+
+let sliderIndividual = document.querySelectorAll(".contenido-slider");
+
+// let puntos = document.getElementsByClassName('punto');
+let puntos = document.querySelectorAll('.punto');
+let contpuntos = 0;
+let contadorSlide = 0;
+let width = sliderIndividual[0].clientWidth;
+let intervalo = 3000;
+
+window.addEventListener('resize', function(){
+    width = sliderIndividual[0].clientWidth;
+})
+
+setInterval(function(){
+    slides();
+}, intervalo);
+
+function slides(){    
+    for(i = 0; i < puntos.length; i++){
+        puntos[i].className = puntos[i].className.replace(" activepuntos","");
+    }
+    slider.style.transform = `translate(${-(width*contadorSlide)}px)`;
+    slider.style.transition = "transform .8s";
+    puntos[contpuntos].classList.add('activepuntos')
+    contadorSlide++;
+    contpuntos++;
+    if(contadorSlide == sliderIndividual.length){
+        setTimeout(function(){
+            slider.style.transform = `translate(0px)`;
+            slider.style.transition = "transform .0s";
+            contadorSlide=1;
+        }, 1500);
+    }
+    if(contpuntos == puntos.length){
+        contpuntos = 0;
+    }
+}
