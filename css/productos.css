@@ -424,7 +424,6 @@
   .contenedor-specific-produc::-webkit-scrollbar{
     margin-top: 5px;
     height: 2px;
-    background-color: ;
   }
   .contenedor-specific-produc::-webkit-scrollbar {
     width: 4px;
@@ -442,6 +441,9 @@
 }
 @media screen and (max-width:500px){
   .main-productos{
+    padding: 0;
+  }
+  .contenedor-productos{
     padding: 0;
   }
   .prod-header img{

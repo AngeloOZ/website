@@ -137,7 +137,7 @@ h4 {
 
 .nav,
 .nav-two {
-    position: absolute;
+    position: relative;
     height: 130px;
     width: 100%;
     display: flex;
@@ -169,17 +169,25 @@ h4 {
     width: 60%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-end;
 }
 
 .enlaces a {
-    font-size: 23px;
+    text-align: center;
+    font-size: 20px;
     font-weight: 600;
     color: #048306;
     text-decoration: none;
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
     transition: .3s ease-in-out border;
+    padding: 10px;
+    margin: 0 10px;
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 10px;
+}
+.enlaces a:first-child{
+    margin-left: 0;
 }
 
 .enlaces a:hover {
@@ -198,7 +206,7 @@ h4 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 40px;
+    font-size: 30px;
     cursor: pointer;
 }
 
@@ -368,74 +376,6 @@ h4 {
     color: white;
     transition: .5s ease .2s;
 }
-
-
-
-/*  */
-.productos {
-    display: flex;
-    flex-flow: wrap row;
-    justify-content: space-evenly;
-    padding: 50px 0;
-}
-
-.producto {
-    width: 350px;
-    height: 280px;
-    background: #95CF25;
-    border: 1px solid #b5b5b5;
-    cursor: pointer;
-    border-radius: 5px;
-    padding: 0;
-    transition: .5s ease-in all;
-    margin-bottom: 100px;
-}
-
-.producto:hover {
-    height: 450px;
-}
-
-.producto:hover .descripcion {
-    display: block;
-}
-
-.producto:hover .textos-productos {
-    visibility: visible;
-}
-
-.imgPro {
-    width: 100%;
-    height: 100%;
-    max-height: 280px;
-}
-
-.imgPro img {
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
-}
-
-.descripcion {
-    display: none;
-}
-
-.producto h3 {
-    letter-spacing: 1px;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-    font-size: 25px;
-    font-weight: 300;
-}
-
-.descripcion .textos-productos {
-    color: white;
-    padding: 20px 10px;
-    text-align: justify;
-    font-size: 15px;
-    visibility: hidden;
-}
-
 /* -------------------------------------------------------------------------- */
 /*                              contenido footer                              */
 /* -------------------------------------------------------------------------- */
@@ -491,7 +431,7 @@ footer.footer {
     height: 150px;
     width: 100%;
     position: relative;
-    background-color: #59d359;
+    background-color: #14141f;
 }
 
 .header-two .enlaces a {
@@ -501,12 +441,9 @@ footer.footer {
 
 .main-curiosidad {
     width: 100%;
-    background: #E6DADA;
-    /* fallback for old browsers */
+    /* background: #E6DADA;
     background: -webkit-linear-gradient(to bottom, #59d359, #E6DADA);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #59d359, #E6DADA);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to bottom, #59d359, #E6DADA); */
 
     margin: auto;
 }
@@ -520,6 +457,7 @@ footer.footer {
     width: 80%;
     margin-top: 20px;
     padding: 20px 40px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
 .title-curiosidad {
@@ -531,17 +469,19 @@ footer.footer {
 .title-curiosidad h1 {
     text-align: center;
     font-size: 40px;
+    margin-bottom: 20px;
 }
-
 .article {
-    border-radius: 25px;
+    border-radius: 8px;
     margin: auto;
     padding: 20px;
     margin-bottom: 30px;
     height: auto;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
 .article h3 {
+    /* text-transform: uppercase; */
     text-align: left;
     font-weight: 600;
     margin-bottom: 20px;
@@ -594,7 +534,8 @@ footer.footer {
     }
 
     .enlaces a {
-        font-size: 15px;
+        font-size: 18px;
+        padding: 5px;
     }
 
     .curiosidad h3 {
@@ -614,56 +555,49 @@ footer.footer {
     .nav-two .enlaces {
         width: 100%;
     }
-
-    .enlaces {
-        position: fixed;
+    .enlaces{
         display: flex;
         flex-direction: column;
-        top: 0;
-        right: 0;
-        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0px;
+        right: -100%;
         width: 100%;
+        height: 100vh;
         transition: all .6s ease;
-        background: #59d359;
-        /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #59d359, #33cc33);
-        /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #59d359, #33cc33);
-        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-color: #14141f;
+    }
+    .enlaces.activeMenu{
+        right: 0;
     }
 
     .enlaces a {
+        margin: 10px 0;
+        background-color: transparent;
+        color: white;
         text-align: center;
         width: 100%;
-        color: #fff;
-        font-size: 30px;
-        font-weight: 400;
-        border: none;
+        font-size: 25px;
+        font-weight: 600;
+        border: 1px solid transparent;
     }
 
     .enlaces a:hover {
-        background-color: rgba(0, 0, 0, .1);
-        border: none;
-    }
-
-    .uno {
-        -webkit-clip-path: circle(0% at 100% 0);
-        clip-path: circle(0% at 100% 0);
-    }
-
-    .dos {
-        -webkit-clip-path: circle(150% at 100% 0);
-        clip-path: circle(150% at 100% 0);
+        color: #ff3d00;
+        border: 1px solid #ff3d00;
     }
 
     .nav .logo,
     .nav-two .logo {
         margin-left: 10px;
     }
-
     .hamburger {
-        height: 60px;
-        width: 60px;
+        position: absolute;
+        top: 50px;
+        right: 30px;
+        height: 40px;
+        width: 40px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -672,9 +606,7 @@ footer.footer {
         border-radius: 25%;
         z-index: 100;
         cursor: pointer;
-        margin-right: 20px;
     }
-
     .text-header {
         bottom: 0;
     }
@@ -777,35 +709,30 @@ footer.footer {
     .about-product p {
         font-size: 18px;
     }
-
     .footer {
         height: auto;
         flex-direction: column-reverse;
     }
-
     .logo-footer {
         display: none;
     }
-
     .social-media {
         margin-top: 15px;
     }
-
     .copyright {
-        margin-top: 10px;
+        /* margin-top: 5px;
+         */
+         margin: 0;
     }
-
     .article-gen {
         padding: 20px 0;
         margin: 0 auto;
         width: 90%;
     }
-
     .title-curiosidad h1 {
         font-size: 35px;
         font-weight: 700;
     }
-    
     .article h3 {
         font-size: 20px;
     }

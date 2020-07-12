@@ -4,20 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Satisfy&display=swap"
         rel="stylesheet">
-
     <!-- Boxicons CSS -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./css/pushbar.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/productos.css">
-
     <!-- Seetalert -->
     <link rel="stylesheet" href="./css/sweetalert2.min.css">  
-    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
-    
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> --> 
     <title>Productos NutriMixes</title>
 </head>
 
@@ -25,17 +21,21 @@
     <div class="watsap">
         <a href="https://api.whatsapp.com/send?phone=593982863244&text=hola"><i class='bx bxl-whatsapp'></i></a>
     </div>
-    <header class="Encabezado">
-        <div class="contenedor">
-            <div class="contenido-header">
-                <div class="navegacion">
-                    <!-- <a href="index.html" class="logo"><img src="./img/NutriMixs.png" alt=""><span>Nutri Mix</span></a> -->
-                    <nav class="nav">
-                        <a href="#compra">Su compra: &emsp; <p id="unidades">0</p>- <p id="total">0,00$<p></a>
-                    </nav>
-                </div>
+    <header class="header-two">
+        <nav class="nav-two">
+            <div class="logo">
+                <a href="/" class=""><img src="./img/NutriMixs.png" alt="nutri mixs logo"></a>
             </div>
-        </div>
+            <div class="hamburger" id="icono">
+                <span><i id="icon" class='bx bx-menu'></i></span>
+            </div>
+            <div class="enlaces uno" id="enlaces">
+                <a href="/">Inicio</a>
+                <a href="beneficios.html">Beneficios</a>
+                <a href="productos.html">Productos</a>
+                <a href="contactos">Contacto</a>
+            </div>
+        </nav>
     </header>
     <div class=container-slider>
         <ul class=slider>
@@ -352,7 +352,7 @@
             <a href="#" class="btn btn-success" id="realizar-pedido">Procesar Pedido</a>
         </div>
     </div>
-
+    <script src="./js/main.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="./js/sweetalert2.all.min.js"></script>
     <script src="./js/pushbar.js"></script>
