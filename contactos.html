@@ -29,9 +29,47 @@
         </nav>
     </header>
     <main class="main-contactos section">
-        <form action=""></form>
+        <div class="cont-contactos">
+            <div class="information-contact">
+                <h1>Información de Contacto</h1>
+                <h2>¡Comunícate con nosotros!</h2>
+                <p>Coop. Pueblo en Marcha</p>
+                <p>nutrimixsec@gmail.com</p>
+                <p>0996921873</p>
+            </div>
+            <form action="" class="form-contactos">
+                <h3>Envianos un Mensaje</h3>
+                <div class="form-group">
+                    <input type="text" name="nonmbre" id="name" placeholder="Nombres">   
+                    <input type="text" id="phone" name="phone" placeholder="Teléfono">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" id="email" placeholder="Email">
+                    <input type="text" id="subject" name="subject" placeholder="Asunto">
+                </div>
+                <div class="form-group">
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Mensaje">
+                    </textarea>
+                </div>
+                <input type="submit" value="ENVIAR" id="enviarEmail">
+            </form>
+        </div>
     </main>
-
+    <footer class="contenedor footer">
+        <p class="copyright">&copy; Todos los derechos reservados </p>
+        <div class="social-media">
+            <ul>
+                <li><a href="https://www.facebook.com/sunutrimixs" target="_blank"><i class='bx bxl-facebook-circle' ></i></a></li>
+                <li><a href="#"><i class='bx bxl-instagram' ></i></a></li>
+                <li><a href="https://api.whatsapp.com/send?phone=593963160436&text=Hola,%20me%20gustaría%20obtener%20información%20sobre%20sus%20productos" target="_blank"><i class='bx bxl-whatsapp' ></i></a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="./js/contactos.js"></script>
     <script src="./js/main.js"></script>
+    <script>
+        MenuResponsive();
+    </script>
 </body>
 </html>

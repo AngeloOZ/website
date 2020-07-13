@@ -441,10 +441,6 @@ footer.footer {
 
 .main-curiosidad {
     width: 100%;
-    /* background: #E6DADA;
-    background: -webkit-linear-gradient(to bottom, #59d359, #E6DADA);
-    background: linear-gradient(to bottom, #59d359, #E6DADA); */
-
     margin: auto;
 }
 
@@ -481,7 +477,6 @@ footer.footer {
 }
 
 .article h3 {
-    /* text-transform: uppercase; */
     text-align: left;
     font-weight: 600;
     margin-bottom: 20px;
@@ -578,7 +573,89 @@ footer.footer {
   .activepuntos{
     background-color: #ff3d00;
   }
-
+/* Contactos */
+.main-contactos{
+    width: 100%;
+}
+.cont-contactos{
+    margin: auto;
+    width: 90%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.information-contact{
+    width: 350px;
+    height: auto;
+    padding: 0 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.information-contact h1{
+    font-weight: 400;
+    font-size: 40px;
+    margin: 0 0 15px 0;
+}
+.information-contact h2{
+    font-weight: 400;
+    font-size: 25px;
+    margin: 15px 0;
+}
+.information-contact p{
+    margin: 15px 0;
+    font-size: 20px;
+}
+.form-contactos{
+    width: 50%;
+    box-sizing: border-box;
+}
+.form-contactos h3{
+    margin-left: 5px;
+    font-weight: 300;
+}
+.form-group{
+    width: 100%;
+    display: flex;
+}
+.form-group textarea{
+    width: 100%;
+    margin: 10px 5px;
+    resize: none;
+    font-size: 20px;
+    background-color: transparent;
+    padding: 5px;
+    outline: none;
+}
+input[type="text"],
+input[type="email"]{
+    display: block;
+    font-size: 20px;
+    width: 100%;
+    margin: 10px 5px;
+    padding: 5px;
+    background-color: transparent;
+    outline: none;
+    border: 1.5px solid #000;
+}
+input[type="submit"]{
+    display: block;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    margin: auto;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-weight: 400;
+    outline: none;
+}
+input[type="submit"]:hover{
+    background-color: #222;
+}
 
 /* Responsive */
 @media screen and (max-width:900px) {
@@ -724,6 +801,21 @@ footer.footer {
         max-width: 100%;
         height: auto;
     }
+    .cont-contactos{
+        width: 90%;
+        margin: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+    .information-contact{
+        width: 100%;
+    }
+    .information-contact h1{
+        text-align: center;
+    }
+    .form-contactos{
+        width: 100%;
+    }
 
 }
 
@@ -817,6 +909,9 @@ footer.footer {
     }
     .contenedor-productos{
         width: 100%;
+    }
+    .form-group{
+        flex-direction: column;
     }
 
 }
