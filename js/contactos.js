@@ -1,8 +1,16 @@
 const btnEnviar = document.getElementById('enviarEmail');
 
+btnEnviar.addEventListener('click', function(e){
+    e.preventDefault();
+    SendMail();
+    setTimeout(function(){
+        location.reload()
+    }, 3000)
+})
+
 function SendMail(){
     let nombre = document.getElementById("name").value;
-    let phone = document.getElementById("phone".value);
+    let phone = document.getElementById("phone").value;
     let email = document.getElementById("email").value;
     let subject = document.getElementById("subject").value;
     let message = document.getElementById("message").value;
@@ -14,6 +22,11 @@ function SendMail(){
         Subject: subject,
         Body: `Nombre: ${nombre}\nTeléfono: ${phone}\nEmail: ${email}\nMensaje: ${message}`
     }).then(
-        console.log('Hola')
+        Swal.fire({
+            icon: 'success',
+            title:  'Mensaje enviado!',
+            text: 'Su mensaje fue enviado correctamente\nPronto nos contactaremos con Ud.',
+            timer: 2500  
+        })
     );
 }

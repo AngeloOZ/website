@@ -191,8 +191,8 @@ h4 {
 }
 
 .enlaces a:hover {
-    border-top: 1px solid #f0992d;
-    border-bottom: 1px solid #f0992d;
+    border-top: 1.5px solid #ff2800;
+    border-bottom: 1.5px solid #ff2800;
 }
 
 .hamburger {
@@ -379,9 +379,10 @@ h4 {
 /* -------------------------------------------------------------------------- */
 /*                              contenido footer                              */
 /* -------------------------------------------------------------------------- */
-footer.footer {
+.footer {
     height: 80px;
     width: 100%;
+    max-width: 1600px;
     background-color: #000;
     display: flex;
     align-items: center;
@@ -437,8 +438,13 @@ footer.footer {
 .header-two .enlaces a {
     color: white;
     font-weight: 400;
+    background-color: transparent;
+    border: 1.5px solid transparent;
+    transition: .3s ease-in;
 }
-
+.header-two .enlaces a:hover{
+    border: 2px solid #ff2800;
+}
 .main-curiosidad {
     width: 100%;
     margin: auto;
