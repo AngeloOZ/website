@@ -57,6 +57,7 @@
 .title-section {
   color: green;
   padding: 15px;
+  font-weight: 400;
 }
 .contenedor-productos {
   padding-top: 30px;
@@ -126,6 +127,8 @@
 
 .prod-body .description{
   font-size: 17px;
+  min-height: 90px;
+  max-height: 92px;
 }
 
 .prod-body .cont-cant {
