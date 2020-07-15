@@ -545,7 +545,15 @@ h4 {
     align-items: center;
     flex-shrink: 0;
   }
-  
+  .contenido-slider.slide-productos{
+    border-radius: 10px;
+    height: 500px;
+  }
+  .contenido-slider.slide-productos >img{
+       border-radius: 10px;
+      width: 75%;
+      height: inherit;
+  } 
   .contenido-slider > img{
     width: 400px;
   }
@@ -608,9 +616,12 @@ h4 {
     font-size: 25px;
     margin: 15px 0;
 }
-.information-contact p{
+.information-contact p,
+.information-contact a{
     margin: 15px 0;
     font-size: 20px;
+    /* text-decoration: none; */
+    color: #000;
 }
 .form-contactos{
     width: 50%;
@@ -906,9 +917,6 @@ input[type="submit"]:hover{
     }
     .article h3 {
         font-size: 20px;
-    }
-    .slider{
-        display: none;
     }
     .prod{
         max-height: 650px !important;
