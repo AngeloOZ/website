@@ -429,12 +429,21 @@ h4 {
 /*                           Pagina de curiosidades                           */
 /* -------------------------------------------------------------------------- */
 .header-two {
-    height: 150px;
+    height: 80px;
     width: 100%;
     position: relative;
     background-color: #14141f;
 }
-
+.nav-two .logo a{
+    height: inherit;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+}
 .header-two .enlaces a {
     color: white;
     font-weight: 400;
@@ -752,7 +761,7 @@ input[type="submit"]:hover{
     }
     .hamburger {
         position: absolute;
-        top: 50px;
+        top: 15px;
         right: 30px;
         height: 50px;
         width: 50px;
@@ -902,8 +911,6 @@ input[type="submit"]:hover{
         margin-top: 15px;
     }
     .copyright {
-        /* margin-top: 5px;
-         */
          margin: 0;
     }
     .article-gen {
@@ -926,6 +933,9 @@ input[type="submit"]:hover{
     }
     .form-group{
         flex-direction: column;
+    }
+    .nav-two .logo a{
+        font-size: 20px;
     }
 
 }

@@ -4,17 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600&family=Satisfy&display=swap" rel="stylesheet">
     <!-- Boxicons CSS -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="./css/pushbar.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/productos.css">
-    <!-- Seetalert -->
-    <!-- corec -->
-    <link rel="stylesheet" href="./css/sweetalert2.min.css">
+
     <link rel="shortcut icon" href="./img/NutriMixs.png" type="image/x-icon">  
-    <title>Productos NutriMixes</title>
+    <title>Productos NutriMixs</title>
 </head>
 
 <body>
@@ -24,7 +21,10 @@
     <header class="header-two">
         <nav class="nav-two">
             <div class="logo">
-                <a href="/" class=""><img src="./img/NutriMixs.png" alt="nutri mixs logo"></a>
+                <a href="/" class="">
+                    <img src="./img/NutriMixs.png" alt="nutri mixs logo">
+                    <span>NutriMixs</span>
+                </a>
             </div>
             <div class="hamburger" id="icono">
                 <span><i id="icon" class='bx bx-menu'></i></span>
@@ -32,53 +32,26 @@
             <div class="enlaces uno" id="enlaces">
                 <a href="/">Inicio</a>
                 <a href="beneficios.html">Beneficios</a>
-                <!-- <a href="productos.html">Productos</a> -->
-                <a href="contactos">Contacto</a>
+                <a href="contactos.html">Contacto</a>
             </div>
         </nav>
     </header>
-    <main class="main-productos galery">
-        <h2>Tortas Nutrimixs</h2>
-        <div class="container-slider sli">
-            <div class="slider-cont">
-                <section class="contenido-slider slide-productos">
-                    <img src="./img/productos/1c.jpg" alt="">
-                </section>
-                <section class="contenido-slider slide-productos">
-                    <img src="./img/productos/2c.jpg" alt="">
-                </section>
-                <section class="contenido-slider slide-productos">
-                    <img src="./img/productos/3c.jpg" alt="">
-                </section>
-                <section class="contenido-slider slide-productos">
-                    <img src="./img/productos/4c.jpg" alt="">
-                </section>
-                <section class="contenido-slider slide-productos">
-                    <img src="./img/productos/5c.jpg" alt="">
-                </section>
-                <section class="contenido-slider slide-productos">
-                    <img src="./img/productos/7c.jpg" alt="">
-                </section>
-                <section class="contenido-slider slide-productos">
-                    <img src="./img/productos/8c.jpg" alt="">
-                </section>
-                <section class="contenido-slider slide-productos">
-                    <img src="./img/productos/9c.jpg" alt="">
-                </section>
-                <section class="contenido-slider slide-productos">
-                    <img src="./img/productos/1c.jpg" alt="">
-                </section>
-            </div>
-            <div class="puntos">
-                <a href="#" class="punto activepuntos"></a>
-                <a href="#" class="punto"></a>
-                <a href="#" class="punto"></a>
-                <a href="#" class="punto"></a>
-                <a href="#" class="punto"></a>
-                <a href="#" class="punto"></a>
-                <a href="#" class="punto"></a>
-                <a href="#" class="punto"></a>
-            </div>
+    <main class="main-productos">
+        <h2 class="title-galery">Tortas Nutrimixs</h2>
+        <div class="container-galery">
+            <img src="img/productos/1c.jpg" alt="" class="img img-1">
+            <img src="img/productos/2c.jpg" alt="" class="img img-2">
+            <img src="img/productos/3c.jpg" alt="" class="img img-3">
+            <img src="img/productos/9c.jpg" alt="" class="img img-4">
+            <img src="img/LogoCentral.png" alt="" class="img img-5">
+            <img src="img/productos/5c.jpg" alt="" class="img img-6">
+            <img src="img/productos/7c.jpg" alt="" class="img img-7">
+            <img src="img/productos/8c.jpg" alt="" class="img img-8">
+            <img src="img/productos/4c.jpg" alt="" class="img img-9">
+        </div>
+        <div class="container-img">
+            <img src="" class="img-show" alt="">
+            <i class='bx bx-x-circle'></i>
         </div>
         <div class="ctn-btn-pedidos">
             <a href="pedidos.html" class="btn btn-pedidos"><span>Realizar Pedido</span></a>
@@ -95,20 +68,9 @@
         </div>
     </footer>
     <script src="./js/main.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="./js/sweetalert2.all.min.js"></script>
-    <script src="./js/pushbar.js"></script>
-    <script src="./js/carrito.js"></script>
-    <script src="./js/pedido.js"></script>
-    <script src="./js/compra.js"></script>
     <script type="text/javascript">
-        // scrollTop();
-        slider();
         MenuResponsive();
-        const pushbar = new Pushbar({
-            blur: true,
-            overlay: true
-        });
+        galeryLighBox();
     </script>
 </body>
 

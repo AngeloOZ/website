@@ -94,3 +94,30 @@ function slider(){
         }
     }
 }
+
+/* -------------------------------------------------------------------------- */
+/*                               Seccion galeria                              */
+/* -------------------------------------------------------------------------- */
+function galeryLighBox(){
+    const  images = document.querySelectorAll('.img');
+    console.log('images: ', images);
+    const ctnImage = document.querySelector('.container-img');
+    const imgShow = document.querySelector('.img-show');
+    
+    images.forEach(image =>{
+        image.addEventListener('click', ()=>{
+            addImage(image.getAttribute('src'));
+        });
+    });
+    
+    const addImage = (src)=>{
+        ctnImage.classList.toggle('show-container');
+        imgShow.classList.toggle('show-img');
+        imgShow.src = src;
+
+    }
+    ctnImage.addEventListener('click', ()=>{
+        imgShow.classList.toggle('show-img');
+        ctnImage.classList.toggle('show-container');
+    })
+}
