@@ -27,11 +27,3 @@ function IniciarProceso() {
         carro.prepararPedido(e)
     });
 }
-
-window.addEventListener('scroll', function () {
-    if (window.scrollY > 300) {
-        btnCarrito.style.opacity = 1;
-    } else {
-        btnCarrito.style.opacity = 0;
-    }
-})

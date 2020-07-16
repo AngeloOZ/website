@@ -169,6 +169,11 @@ class Carrito {
             total += element;
         }
         etiquetaPrecio.innerHTML = `$${total.toFixed(2)}`;
+        if(total != 0){
+            btnCarrito.style.opacity = 1;
+        }else{
+            btnCarrito.style.opacity = 0;
+        }
     }
     procesarPedido(e){
         e.preventDefault();

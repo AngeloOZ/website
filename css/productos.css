@@ -270,7 +270,7 @@
   justify-content: center;
   align-items: center;
   right: 50px;
-  bottom: 0;
+  bottom: 50px;
   width: 60px;
   height: 60px;
   opacity: 0;
@@ -280,21 +280,20 @@
   cursor: pointer;
 }
 
-.ver-carrito:hover {
+/* .ver-carrito:hover {
   border-radius: 8px;
   width: 200px;
   height: 50px;
-}
+} */
 
-.ver-carrito:hover span {
-  /* transition-delay: 3s; */
+/* .ver-carrito:hover span {
   display: block;
   transition: .3s ease 1s;
-}
+} */
 
-.ver-carrito:hover i {
+/* .ver-carrito:hover i {
   margin-right: 10px;
-}
+} */
 
 .ver-carrito span {
   display: none;
